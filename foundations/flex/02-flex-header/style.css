@@ -1,25 +1,57 @@
-.header  {
-  font-family: monospace;
-  background: papayawhip;
+/* Réinitialisation des marges et des paddings par défaut du body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: dimgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Style de l'en-tête avec flexbox pour aligner les éléments */
+.header {
+  font-family: monospace;
+  background: papayawhip;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px; /* Ajouté pour donner de l'espace intérieur */
+}
+
+/* Style du logo */
 .logo {
   font-size: 48px;
   font-weight: 900;
   color: tomato;
   background: white;
   padding: 4px 32px;
+  margin: 0; /* Suppression de la marge pour éviter le décalage */
+  display: flex;
+  align-items: center;
 }
 
+/* Suppression des puces des éléments de liste */
 ul {
-  /* this removes the dots on the list items*/
   list-style-type: none;
+  margin: 0; /* Ajouté pour supprimer les marges par défaut */
+  padding: 0; /* Ajouté pour supprimer les paddings par défaut */
 }
 
+/* Style des listes dans les divs pour les aligner avec flexbox */
+div > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Style des liens */
 a {
   font-size: 22px;
   background: white;
   padding: 8px;
-  /* this removes the line under the links */
-  text-decoration: none;
+  text-decoration: none; /* Suppression de la ligne sous les liens */
+  color: inherit; /* Ajouté pour hériter de la couleur du parent */
 }
